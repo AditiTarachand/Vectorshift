@@ -1,5 +1,5 @@
 // frontend/src/nodes/BaseNode.js
-import { Handle, Position } from 'reactflow';
+import { Handle } from 'reactflow';
 
 // 1. Styling Constants
 const nodeStyles = {
