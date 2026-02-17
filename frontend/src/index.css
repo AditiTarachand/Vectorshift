@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root {
+  /* VectorShift Inspired Dark Theme Palette */
+  --bg-dark: #0f172a;       
+  --node-bg: #1e293b;      
+  --node-border: #334155;   
+  --primary: #7c3aed;    
+  --primary-hover: #8b5cf6; 
+  --text-main: #f8fafc;     
+  --text-secondary: #94a3b8
+  --danger: #ef4444;        
+  --success: #22c55e;     
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden; 
+}
+
+.react-flow__controls {
+  background-color: #1e293b !important; 
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background-color: #1e293b !important;
+  border-bottom: 1px solid #334155 !important;
+  border-right: none;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+
+.react-flow__controls-button:hover {
+  background-color: #334155 !important;
+  cursor: pointer;
+}
+
+
+.react-flow__controls-button svg {
+  fill: #e2e8f0 !important; 
+  max-width: 14px;
+  max-height: 14px;
+}
+
+
+.react-flow__controls-button svg path {
+  fill: currentColor;
+}
+
+
+/* React Flow  Overrides --- */
+.react-flow__renderer {
+  background-color: transparent !important; 
+}
+
+/* Dots Pattern Color*/
+.react-flow__background circle {
+  fill: #475569 !important; 
+}
+
+/* Connection Lines */
+.react-flow__edge-path {
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+.react-flow__connection-path {
+  stroke: #7c3aed !important;
+  stroke-width: 2px;
+  stroke-dasharray: 5;
+}
+
+.react-flow__marker {
+  fill: #94a3b8 !important;
+}
+
+/* --- 2. The Nodes (Global Styling) --- */
+
+.react-flow__node {
+  /* Default node wrapper removal */
+  border: none !important; 
+  background: transparent !important;
+  width: auto !important; 
+}
+
+/* Hover Effect for Handles */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border: 2px solid #fff;
+  transition: transform 0.2s;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.5); /* Pop effect */
+  background: #fff;
+  border-color: var(--primary);
+  cursor: crosshair;
+}
+
+
+/* Custom Input styling  */
+
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box; /* Padding doesn't break width */
+  background-color: #0f172a;
+  border: 1px solid var(--node-border);
+  color: var(--text-main);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  margin-top: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2); /* Purple Glow */
+}
+
+/* Input Labels */
+label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+/*  Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; 
+}
+
+/* --- 5. Submit Button (Floating Action) --- */
+
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--primary) 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px; 
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.4);
+  transition: all 0.3s ease;
+  
+ 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.5);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+
+.react-flow {
+  background-color: #0f172a !important; 
+}
+
+.react-flow__background {
+  background-color: transparent !important;
+}
